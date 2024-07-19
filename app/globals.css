@@ -13,6 +13,15 @@
   padding-right: 40px;
 }
 
+h1 {
+  font-size: 72px;
+  line-height: normal;
+}
+
+p {
+  font-size: 24px;
+}
+
 /* :root {
   --foreground-rgb: 0, 0, 0;
   --background-start-rgb: 214, 219, 220;

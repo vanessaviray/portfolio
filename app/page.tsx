@@ -112,10 +112,30 @@
 //   );
 // }
 
+import "./css/Home.css";
+import { FaGithub } from "react-icons/fa6";
+import { IoLogoLinkedin } from "react-icons/io5";
+
 export default function Home() {
   return (
-    <main className="container text-red-500">
-      <div>Hello</div>
+    <main className="container">
+      <div className="flex flex-col justify-center">
+        <h1 className="text-center">
+          Something about myself and what I can do for you.
+        </h1>
+        <p className="flex justify-center">
+          My slogan is “I deliver,” and hire me. Please.
+        </p>
+        <div className="flex justify-center">
+          <button className="lets-talk-hero-btn">Let's Talk</button>
+          <button className="socials-frame">
+            <FaGithub size={46} />
+          </button>
+          <button className="socials-frame">
+            <IoLogoLinkedin size={46} />
+          </button>
+        </div>
+      </div>
     </main>
   );
 }

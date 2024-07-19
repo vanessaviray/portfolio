@@ -1,0 +1,16 @@
+.lets-talk-hero-btn {
+  border: solid 1px;
+  border-radius: 30px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-left: 36px;
+  padding-right: 36px;
+}
+
+.socials-frame {
+  border-radius: 50%;
+  overflow: hidden;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
