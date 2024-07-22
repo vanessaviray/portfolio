@@ -7,7 +7,7 @@ export type Project = {
   techHighlights: string[];
 };
 
-export const projects: Projects[] = [
+export const projects: Project[] = [
   {
     name: "MarketMon",
     shortDescription: "This is a short description of this project",

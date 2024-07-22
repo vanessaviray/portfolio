@@ -117,6 +117,7 @@ import { FaGithub } from "react-icons/fa6";
 import { IoLogoLinkedin } from "react-icons/io5";
 import { ProjectCard } from "./components/ProjectCard";
 import { Inter } from "next/font/google";
+import { projects } from "./data/data";
 
 export const inter = Inter({
   subsets: ["latin"],
@@ -147,7 +148,9 @@ export default function Home() {
       </div>
       <div className="flex flex-col items-center">
         <h3 className="pt-[48px] pb-[48px]">My Work</h3>
-        <ProjectCard />
+        {projects.map((project, index) => (
+          <ProjectCard key={index} project={project} />
+        ))}
       </div>
     </main>
   );
