@@ -13,8 +13,18 @@
   padding-right: 40px;
 }
 
+.row {
+  display: flex;
+  flex-direction: row;
+}
+
 h1 {
   font-size: 72px;
+  line-height: normal;
+}
+
+h2 {
+  font-size: 60px;
   line-height: normal;
 }
 
