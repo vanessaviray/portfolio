@@ -1,4 +1,4 @@
-import { Project } from "../data/data";
+import { Project, projects } from "../data/data";
 
 type ProjectCardProps = {
   project: Project;
@@ -6,7 +6,7 @@ type ProjectCardProps = {
 
 export function ProjectCard({ project }: ProjectCardProps) {
   return (
-    <div className="project-card-container flex items-center w-full h-[600px] rounded-[30px] pl-[50px]">
+    <div className="project-card-container flex items-center w-full h-[600px] rounded-[30px] pl-[50px] mb-6">
       <div>
         <h2>{project.name}</h2>
         <p className="font-light my-6">{project.shortDescription}</p>
@@ -24,16 +24,24 @@ export function ProjectCard({ project }: ProjectCardProps) {
             <p className="text-sm text-customColor-lightGray">Completed</p>
           </div>
         </div>
-        <TechHighlight />
+        <div className="tech-highlights">
+          {project.techHighlights.map((tech, index) => (
+            <TechHighlight key={index} tech={tech} />
+          ))}
+        </div>
       </div>
     </div>
   );
 }
 
-function TechHighlight() {
+type TechHighlightProps = {
+  tech: string;
+};
+
+function TechHighlight({ tech }: TechHighlightProps) {
   return (
-    <div className="bg-customColor-lightGray2 inline-block py-2 px-4 rounded-md">
-      <p className="text-sm font-medium">Tech</p>
+    <div className="bg-customColor-lightGray2 inline-block py-2 px-4 rounded-md mr-[10px]">
+      <p className="text-sm font-medium">{tech}</p>
     </div>
   );
 }

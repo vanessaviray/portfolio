@@ -9,8 +9,9 @@ export type Project = {
 
 export const projects: Project[] = [
   {
-    name: "MarketMon",
-    shortDescription: "This is a short description of this project",
+    name: "Conbini Corner",
+    shortDescription:
+      "A full stack e-commerce site for users who want to purchase snacks and drinks imported from Japan.",
     duration: "3 Weeks",
     teamSize: "Independent",
     completionDate: "July 5, 2024",
@@ -32,8 +33,9 @@ export const projects: Project[] = [
     techHighlights: ["JavaScript", "TypeScript", "Next", "CSS", "Rest API"],
   },
   {
-    name: "Conbini Corner",
-    shortDescription: "This is a short description of this project",
+    name: "MarketMon",
+    shortDescription:
+      "A dynamic web app that allows users to search and view the details of 12,000+ Pokémon cards, create a digital card collection and see its total estimated market value.",
     duration: "2 Weeks",
     teamSize: "Independent",
     completionDate: "July 5, 2024",
