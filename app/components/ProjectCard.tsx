@@ -2,12 +2,17 @@ import { Project, projects } from "../data/data";
 
 type ProjectCardProps = {
   project: Project;
+  index: number;
 };
 
-export function ProjectCard({ project }: ProjectCardProps) {
+export function ProjectCard({ project, index }: ProjectCardProps) {
+  const isOdd = index % 2 !== 0;
+
   return (
-    <div className="project-card-container flex items-center w-full h-[600px] rounded-[30px] pl-[50px] mb-6">
-      <div>
+    <div
+      className={`project-card-container flex items-center justify-between w-full h-[600px] rounded-[30px] pl-[50px] mb-6 ${isOdd ? "flex-row-reverse" : ""}`}
+    >
+      <div className="w-[50%]">
         <h2>{project.name}</h2>
         <p className="font-light my-6">{project.shortDescription}</p>
         <div className="row mb-[52px]">
@@ -30,6 +35,7 @@ export function ProjectCard({ project }: ProjectCardProps) {
           ))}
         </div>
       </div>
+      <div className="w-[41%] h-[450px] bg-customColor-lightGray2 rounded-l-[30px]"></div>
     </div>
   );
 }

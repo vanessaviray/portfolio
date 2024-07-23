@@ -111,6 +111,7 @@
 //     </main>
 //   );
 // }
+"use client";
 
 import "./css/Home.css";
 import { FaGithub } from "react-icons/fa6";
@@ -149,7 +150,7 @@ export default function Home() {
       <div className="flex flex-col items-center">
         <h3 className="pt-[48px] pb-[48px]">My Work</h3>
         {projects.map((project, index) => (
-          <ProjectCard key={index} project={project} />
+          <ProjectCard key={index} project={project} index={index} />
         ))}
       </div>
     </main>

@@ -30,7 +30,7 @@ export const projects: Project[] = [
     duration: "3 Weeks",
     teamSize: "Independent",
     completionDate: "July 5, 2024",
-    techHighlights: ["JavaScript", "TypeScript", "Next", "CSS", "Rest API"],
+    techHighlights: ["JavaScript", "TypeScript", "Next", "Tailwind"],
   },
   {
     name: "MarketMon",
