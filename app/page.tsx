@@ -16,7 +16,7 @@ const inter = Inter({
 export default function Home() {
   return (
     <main className={`container ${inter.className}`}>
-      <div className="flex flex-col justify-center items-center pb-[52px]">
+      <div className="flex flex-col justify-center items-center mb-[52px] mt-[163px]">
         <h1 className="text-center max-w-[1045px]">
           Something about myself and what I can do for you.
         </h1>
