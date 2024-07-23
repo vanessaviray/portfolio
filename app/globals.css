@@ -2,7 +2,42 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
+* {
+  box-sizing: border-box;
+}
+
+.container {
+  width: 1360px;
+  margin: 0 auto;
+  padding-left: 40px;
+  padding-right: 40px;
+}
+
+.row {
+  display: flex;
+  flex-direction: row;
+}
+
+h1 {
+  font-size: 72px;
+  line-height: normal;
+}
+
+h2 {
+  font-size: 60px;
+  line-height: normal;
+}
+
+h3 {
+  font-size: 48px;
+  line-height: normal;
+}
+
+p {
+  font-size: 24px;
+}
+
+/* :root {
   --foreground-rgb: 0, 0, 0;
   --background-start-rgb: 214, 219, 220;
   --background-end-rgb: 255, 255, 255;
@@ -30,4 +65,4 @@ body {
   .text-balance {
     text-wrap: balance;
   }
-}
+} */
