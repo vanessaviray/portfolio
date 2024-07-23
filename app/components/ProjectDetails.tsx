@@ -1,6 +1,7 @@
 "use client";
 
 import { useProject } from "./ProjectContext";
+import TechHighlight from "./TechHightlight";
 
 const ProjectDetails = () => {
   const { project } = useProject();
@@ -31,13 +32,13 @@ const ProjectDetails = () => {
           </div>
         </div>
         <div className="tech-highlights">
-          {/* {project.techHighlights.map((tech, index) => (
+          {project.techHighlights.map((tech, index) => (
             <TechHighlight key={index} tech={tech} />
-          ))} */}
+          ))}
         </div>
       </div>
       <div
-        className={`w-[46%] h-[450px] bg-customColor-lightGray2 rounded-[50px]`}
+        className={`w-[46%] h-[500px] bg-customColor-lightGray2 rounded-[50px]`}
       ></div>
     </div>
   );
