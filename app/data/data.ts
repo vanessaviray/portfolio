@@ -5,6 +5,7 @@ export type Project = {
   teamSize: string;
   completionDate: string;
   techHighlights: string[];
+  url: string;
 };
 
 export const projects: Project[] = [
@@ -23,6 +24,7 @@ export const projects: Project[] = [
       "PostgreSQL",
       "CSS",
     ],
+    url: "conbini-corner",
   },
   {
     name: "Personal Portfolio",
@@ -31,6 +33,7 @@ export const projects: Project[] = [
     teamSize: "Independent",
     completionDate: "July 5, 2024",
     techHighlights: ["JavaScript", "TypeScript", "Next", "Tailwind"],
+    url: "personal-portfolio",
   },
   {
     name: "MarketMon",
@@ -40,5 +43,6 @@ export const projects: Project[] = [
     teamSize: "Independent",
     completionDate: "July 5, 2024",
     techHighlights: ["JavaScript", "TypeScript", "HTML", "CSS", "Rest API"],
+    url: "marketmon",
   },
 ];
