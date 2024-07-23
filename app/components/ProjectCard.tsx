@@ -1,6 +1,7 @@
 "use client";
 
 import { Project, projects } from "../data/data";
+import TechHighlight from "./TechHightlight";
 
 type ProjectCardProps = {
   project: Project;
@@ -44,14 +45,14 @@ export function ProjectCard({ project, index }: ProjectCardProps) {
   );
 }
 
-type TechHighlightProps = {
-  tech: string;
-};
+// type TechHighlightProps = {
+//   tech: string;
+// };
 
-function TechHighlight({ tech }: TechHighlightProps) {
-  return (
-    <div className="bg-customColor-lightGray2 inline-block py-2 px-4 rounded-md mr-[10px]">
-      <p className="text-sm font-medium">{tech}</p>
-    </div>
-  );
-}
+// function TechHighlight({ tech }: TechHighlightProps) {
+//   return (
+//     <div className="bg-customColor-lightGray2 inline-block py-2 px-4 rounded-md mr-[10px]">
+//       <p className="text-sm font-medium">{tech}</p>
+//     </div>
+//   );
+// }
