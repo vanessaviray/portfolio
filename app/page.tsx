@@ -6,7 +6,9 @@ import { FaGithub } from "react-icons/fa6";
 import { IoLogoLinkedin } from "react-icons/io5";
 import { ProjectCard } from "./components/ProjectCard";
 import { Inter } from "next/font/google";
-import { projects } from "./data/data";
+import { Project, projects } from "./data/data";
+import Link from "next/link";
+import { useProject } from "./components/ProjectContext";
 
 const inter = Inter({
   subsets: ["latin"],
@@ -14,6 +16,12 @@ const inter = Inter({
 });
 
 export default function Home() {
+  const { setProject } = useProject();
+
+  const handleProjectClick = (project: Project) => {
+    setProject(project);
+  };
+
   return (
     <main className={`container ${inter.className}`}>
       <div className="flex flex-col justify-center items-center mb-[52px] mt-[163px]">
@@ -38,7 +46,16 @@ export default function Home() {
       <div className="flex flex-col items-center">
         <h3 className="pt-[48px] pb-[48px]">My Work</h3>
         {projects.map((project, index) => (
-          <ProjectCard key={index} project={project} index={index} />
+          <Link
+            className="w-full"
+            key={index}
+            href={`/${project.url}`}
+            passHref
+          >
+            <div onClick={() => handleProjectClick(project)}>
+              <ProjectCard project={project} index={index} />
+            </div>
+          </Link>
         ))}
       </div>
     </main>

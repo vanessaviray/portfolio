@@ -1,20 +1,19 @@
 "use client";
 
-import { Project, projects } from "../data/data";
+import { useProject } from "./ProjectContext";
 
-type ProjectCardProps = {
-  project: Project;
-  index: number;
-};
+const ProjectDetails = () => {
+  const { project } = useProject();
 
-export function ProjectCard({ project, index }: ProjectCardProps) {
-  const isOdd = index % 2 !== 0;
+  if (!project) {
+    return <div>No project selected</div>;
+  }
 
   return (
     <div
-      className={`project-card-container flex items-center justify-between w-full h-[600px] rounded-[30px] mb-6 ${isOdd ? "flex-row-reverse pr-[50px]" : "pl-[50px]"}`}
+      className={`flex items-center justify-between w-full h-[600px] rounded-[30px] mb-6`}
     >
-      <div className="w-[50%]">
+      <div className="w-[46%]">
         <h2>{project.name}</h2>
         <p className="font-light my-6">{project.shortDescription}</p>
         <div className="row mb-[52px]">
@@ -32,26 +31,16 @@ export function ProjectCard({ project, index }: ProjectCardProps) {
           </div>
         </div>
         <div className="tech-highlights">
-          {project.techHighlights.map((tech, index) => (
+          {/* {project.techHighlights.map((tech, index) => (
             <TechHighlight key={index} tech={tech} />
-          ))}
+          ))} */}
         </div>
       </div>
       <div
-        className={`w-[41%] h-[450px] bg-customColor-lightGray2 ${isOdd ? "rounded-r-[30px]" : "rounded-l-[30px]"}`}
+        className={`w-[46%] h-[450px] bg-customColor-lightGray2 rounded-[50px]`}
       ></div>
     </div>
   );
-}
-
-type TechHighlightProps = {
-  tech: string;
 };
 
-function TechHighlight({ tech }: TechHighlightProps) {
-  return (
-    <div className="bg-customColor-lightGray2 inline-block py-2 px-4 rounded-md mr-[10px]">
-      <p className="text-sm font-medium">{tech}</p>
-    </div>
-  );
-}
+export default ProjectDetails;
