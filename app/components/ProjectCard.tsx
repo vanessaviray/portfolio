@@ -10,7 +10,7 @@ export function ProjectCard({ project, index }: ProjectCardProps) {
 
   return (
     <div
-      className={`project-card-container flex items-center justify-between w-full h-[600px] rounded-[30px] pl-[50px] mb-6 ${isOdd ? "flex-row-reverse" : ""}`}
+      className={`project-card-container flex items-center justify-between w-full h-[600px] rounded-[30px] mb-6 ${isOdd ? "flex-row-reverse pr-[50px]" : "pl-[50px]"}`}
     >
       <div className="w-[50%]">
         <h2>{project.name}</h2>
@@ -35,7 +35,9 @@ export function ProjectCard({ project, index }: ProjectCardProps) {
           ))}
         </div>
       </div>
-      <div className="w-[41%] h-[450px] bg-customColor-lightGray2 rounded-l-[30px]"></div>
+      <div
+        className={`w-[41%] h-[450px] bg-customColor-lightGray2 ${isOdd ? "rounded-r-[30px]" : "rounded-l-[30px]"}`}
+      ></div>
     </div>
   );
 }

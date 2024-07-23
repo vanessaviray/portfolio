@@ -120,7 +120,7 @@ import { ProjectCard } from "./components/ProjectCard";
 import { Inter } from "next/font/google";
 import { projects } from "./data/data";
 
-export const inter = Inter({
+const inter = Inter({
   subsets: ["latin"],
   weight: ["100", "200", "300", "400", "500", "600", "700", "800", "900"],
 });
@@ -133,11 +133,11 @@ export default function Home() {
           Something about myself and what I can do for you.
         </h1>
         <p className="flex justify-center font-light my-6">
-          My slogan is “I deliver,” and hire me. Please.
+          My slogan is &ldquo;I deliver,&rdquo; and hire me. Please.
         </p>
         <div className="flex justify-center">
           <button className="border border-solid border-1 rounded-[30px] pt-[10px] pb-[10px] pl-[36px] pr-[36px] mx-2">
-            Let's Talk
+            Let&apos;s Talk
           </button>
           <button className="socials-frame mx-2">
             <FaGithub size={46} />
