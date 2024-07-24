@@ -13,12 +13,12 @@ export function ProjectCard({ project, index }: ProjectCardProps) {
 
   return (
     <div
-      className={`project-card-container flex items-center justify-between w-full h-[600px] rounded-[30px] mb-6 ${isOdd ? "flex-row-reverse pr-[50px]" : "pl-[50px]"}`}
+      className={`project-card-container flex flex-col lg:flex-row items-center justify-between w-full h-[100%] lg:h-[600px] rounded-[30px] mb-6 px-[16px] ${isOdd ? "lg:flex-row-reverse lg:pr-[50px] lg:pl-0" : "lg:pl-[50px] lg:pr-0"}`}
     >
-      <div className="w-[50%]">
+      <div className="w-[100%] lg:w-[50%] mt-9 lg:mt-0">
         <h2>{project.name}</h2>
         <p className="font-light my-6">{project.shortDescription}</p>
-        <div className="row mb-[52px]">
+        <div className="hidden lg:row lg:mb-[52px]">
           <div className="mr-[64px]">
             <p className="font-light">{project.duration}</p>
             <p className="text-sm text-customColor-lightGray">Duration</p>
@@ -39,7 +39,7 @@ export function ProjectCard({ project, index }: ProjectCardProps) {
         </div>
       </div>
       <div
-        className={`w-[41%] h-[450px] bg-customColor-lightGray2 ${isOdd ? "rounded-r-[30px]" : "rounded-l-[30px]"}`}
+        className={`w-[88%] lg:w-[41%] h-[180px] lg:h-[450px] bg-customColor-lightGray2 mt-[51px] lg:mt-0 rounded-t-[15px] ${isOdd ? "lg:rounded-r-[30px] lg:rounded-l-[0px]" : "lg:rounded-r-[0px] lg:rounded-l-[30px]"}`}
       ></div>
     </div>
   );
