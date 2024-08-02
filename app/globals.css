@@ -39,7 +39,7 @@ p {
 
 @media screen and (width >= 768px) {
   .container {
-    width: 1360px;
+    width: 1440px;
     padding-left: 40px;
     padding-right: 40px;
   }
