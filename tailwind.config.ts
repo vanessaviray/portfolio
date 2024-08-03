@@ -17,6 +17,7 @@ const config: Config = {
         customColor: {
           lightGray: "#999999",
           lightGray2: "#EFEAE8",
+          lightGray3: "#e5e5e5",
         },
       },
     },

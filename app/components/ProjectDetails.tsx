@@ -5,10 +5,14 @@ import { useProject } from "./ProjectContext";
 import TechHighlight from "./TechHightlight";
 
 const ProjectDetails = () => {
-  const { project } = useProject();
+  const { project, loading } = useProject();
+
+  if (loading) {
+    return <div className="container">Loading...</div>;
+  }
 
   if (!project) {
-    return <div>No project selected</div>;
+    return <div className="container">No project selected</div>;
   }
 
   return (

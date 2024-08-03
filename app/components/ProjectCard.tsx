@@ -13,7 +13,7 @@ export function ProjectCard({ project, index }: ProjectCardProps) {
 
   return (
     <div
-      className={`project-card-container flex flex-col lg:flex-row items-center justify-between w-full h-[100%] lg:h-[600px] rounded-[30px] mb-6 px-[16px] ${isOdd ? "lg:flex-row-reverse lg:pr-[50px] lg:pl-0" : "lg:pl-[50px] lg:pr-0"}`}
+      className={`border border-customColor-lightGray3 flex flex-col lg:flex-row items-center justify-between w-full h-[100%] lg:h-[600px] rounded-[30px] mb-6 px-[16px] ${isOdd ? "lg:flex-row-reverse lg:pr-[50px] lg:pl-0" : "lg:pl-[50px] lg:pr-0"}`}
     >
       <div className="w-[100%] lg:w-[52%] mt-9 lg:mt-0">
         <h2>{project.name}</h2>
