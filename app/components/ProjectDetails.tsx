@@ -19,7 +19,7 @@ const ProjectDetails = () => {
     <>
       <div className="container relative">
         <div
-          className={`flex flex-col-reverse lg:flex-row items-center justify-between w-full lg:h-[600px] mt-[50px] lg:mt-0 mb-6`}
+          className={`flex flex-col-reverse lg:flex-row items-center justify-between w-full lg:h-[600px] lg:mt-[153px] mb-6`}
         >
           <div className="w-full lg:w-[47%] flex flex-col mt-[36px] lg:mt-0 gap-[24px]">
             <h2 className="order-1">{project.name}</h2>
