@@ -3,7 +3,7 @@ import React from "react";
 
 function ProjectPage() {
   return (
-    <div className="container">
+    <div>
       <ProjectDetails />
     </div>
   );
