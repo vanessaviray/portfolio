@@ -24,11 +24,11 @@ export default function Home() {
 
   return (
     <main className={`container ${inter.className}`}>
-      <div className="flex flex-col justify-center items-center mb-[52px] mt-[163px]">
+      <div className="flex flex-col justify-center items-center mb-[95px] lg:mb-[52px] mt-[70px] lg:mt-[163px]">
         <h1 className="text-center max-w-[1045px]">
           Something about myself and what I can do for you.
         </h1>
-        <p className="flex justify-center font-light my-6">
+        <p className="flex justify-center text-center font-light my-6">
           My slogan is &ldquo;I deliver,&rdquo; and hire me. Please.
         </p>
         <div className="flex justify-center">
@@ -44,7 +44,7 @@ export default function Home() {
         </div>
       </div>
       <div className="flex flex-col items-center">
-        <h3 className="pt-[48px] pb-[48px]">My Work</h3>
+        <h3 className="pt-0 lg:pt-[48px] pb-[27px] lg:pb-[48px]">My Work</h3>
         {projects.map((project, index) => (
           <Link
             className="w-full"

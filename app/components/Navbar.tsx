@@ -8,7 +8,7 @@ export function Navbar() {
       <Link href="/">
         <p>Vanessa Viray</p>
       </Link>
-      <ul className="flex space-x-6">
+      <ul className="hidden lg:flex lg:space-x-6">
         <li>
           <Link href="/">Work</Link>
         </li>
