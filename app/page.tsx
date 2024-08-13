@@ -29,7 +29,7 @@ export default function Home() {
           Something about myself and what I can do for you.
         </h1>
         <p className="flex justify-center text-center font-light my-6">
-          My slogan is &ldquo;I deliver,&rdquo; and hire me. Please.
+          This is placeholder text for the hero section.
         </p>
         <div className="flex justify-center">
           <button className="border border-solid border-1 rounded-[30px] pt-[10px] pb-[10px] pl-[36px] pr-[36px] mx-2">
